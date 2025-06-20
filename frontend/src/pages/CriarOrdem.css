@@ -1,0 +1,203 @@
+/* CriarOrdem.css */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Um cinza claro suave para o fundo */
+  color: #343a40; /* Cor de texto principal */
+  line-height: 1.6;
+}
+
+.criar-ordem-container {
+  max-width: 900px; /* Largura máxima para o conteúdo */
+  margin: 40px auto; /* Centraliza e adiciona espaço nas laterais */
+  padding: 30px 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Sombra mais sutil */
+  animation: fadeInScale 0.6s ease-out; /* Animação de entrada */
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h2 {
+  text-align: center;
+  color: #007bff; /* Azul vibrante para o título principal */
+  margin-bottom: 35px;
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h4 {
+  color: #495057; /* Cor mais escura para subtítulos */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef; /* Linha sutil para separar seções */
+  padding-bottom: 8px;
+}
+
+/* Estilo geral para inputs e selects */
+input[type="text"],
+input[type="number"], /* Adicionado para campos numéricos */
+select {
+  width: calc(100% - 24px); /* Ajuste para padding */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da; /* Borda suave */
+  border-radius: 8px;
+  font-size: 1em;
+  color: #495057;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Estilo específico para dropdowns (selects) */
+select {
+  appearance: none; /* Remove o estilo padrão do sistema operacional */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.4c-6.5%200-13.1%202.6-17.6%207.1-4.5%204.5-7.1%2011.1-7.1%2017.6s2.6%2013.1%207.1%2017.6l128%20128c4.5%204.5%2010.1%207.1%2016.7%207.1s12.2-2.6%2016.7-7.1l128-128c4.5-4.5%207.1-11.1%207.1-17.6-.1-6.5-2.7-13.1-7.2-17.6z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  padding-right: 30px; /* Espaço para o ícone */
+}
+
+/* Checkbox para Membros da Equipe */
+.membro-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e9ecef;
+}
+
+.membro-item:last-child {
+  border-bottom: none;
+}
+
+.membro-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: auto; /* Reseta a largura para checkboxes */
+  transform: scale(1.2); /* Aumenta um pouco o checkbox */
+  cursor: pointer;
+  accent-color: #007bff; /* Cor do checkbox quando marcado */
+}
+
+.membro-item label {
+  font-size: 1em;
+  color: #343a40;
+  cursor: pointer;
+}
+
+/* Inputs para Latitude/Longitude (Equipamentos e Localização) */
+.localizacao-inputs,
+.equipamento-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas */
+  gap: 15px; /* Espaço entre os inputs */
+  margin-bottom: 15px;
+}
+
+.equipamento-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.equipamento-item p {
+  font-weight: 600;
+  color: #212529;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Iframe do Mapa */
+iframe {
+  border: 1px solid #ced4da;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Botão de Criar Ordem */
+button {
+  background-color: #28a745; /* Verde para ação de criar */
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.15em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .criar-ordem-container {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  .localizacao-inputs,
+  .equipamento-inputs {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .criar-ordem-container {
+    padding: 20px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 10px;
+  }
+}

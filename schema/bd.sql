@@ -14,6 +14,8 @@ CREATE TABLE usuarios (
   email VARCHAR(100)
 );
 
+INSERT INTO usuarios (matricula, senha, nome, tipo, telefone, email) VALUES ('123456', '$2b$10$mtwwD0PU63/ZvDBFW4aTl.oXZxP4xnAT6sAc0/wMsD2FCGXeRX6sW', 'João Silva', 'gestor', '11987654321', 'gestor@gmail.com');
+
 -- Tabela de ordens de serviço
 CREATE TABLE ordens_servico (
   id INT AUTO_INCREMENT PRIMARY KEY,
